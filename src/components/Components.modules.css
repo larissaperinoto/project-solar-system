@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(208, 164, 220, 0.6);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header {
+  margin: 90px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+h1:hover {
+  color: rgb(241, 241, 240);
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 70px;
+  color: rgba(252, 252, 252, 0.948);
+  text-shadow: -30px 3px 0 rgba(136, 22, 137, 0.789);
+  text-align: center;
+  align-self: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+main {
+  display: flex;
+  width: 100%;
+}
+
+@keyframes rotate {
+  to{ transform:rotate(360deg);}
+}
+
+.planetsContainer, .missionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  text-align: center;
+  width: 50%;
+}
+
+.planetsContainer {
+  background-color: rgba(127, 255, 212, 0.195);
+}
+
+.missionsContainer {
+  background-color: rgba(255, 127, 80, 0.314);
+}
+
+.title {
+  font-size: 30px;
+  padding: 50px;
+  margin: 50px;
+  color: black;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.planetsContainerCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.planetCard {
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+.planetCard img {
+  width: 100%;
+  animation: rotate 10s infinite;
+}
+
+.planetCard img:hover {
+  cursor: pointer;
+  animation: none;
+}
+
+.planetCard p {
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: -2px 3px 0px rgba(0, 0, 255, 0.325);
+  font-family: 'Press Start 2P', cursive;
+}
+
+.planetCard p:hover {
+  text-shadow: -2px 3px 0px rgba(173, 104, 131, 0.325);
+  cursor: pointer;
+}
+
+.missionsContainerCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.missionsCard {
+  border: 1px solid black;
+  width: 280px;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: rgba(157, 213, 157, 0.33);
+  box-shadow: -5px 5px 0 rgba(0, 0, 0, 0.723);
+  animation: showCards 5s;
+}
+
+.missionsCard:hover {
+  background-color: rgba(255, 228, 196, 0.421);
+  box-shadow: -10px 10px 0 black;
+}
+
+@keyframes showCards {
+ 0% {opacity: 0;}
+ 10% {opacity: 0.1;}
+ 30% {opacity: 0.3;}
+ 50% {opacity: 0.5;}
+ 60% {opacity: 0.6;}
+ 80% {opacity: 0.8;}
+ 100% {opacity: 1;}
+}
+
+.missionsCard p {
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.5;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: -2px 3px 0px pink;
+  padding: 20px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+@media screen and (max-width: 810px) {
+  main {
+    display: block;
+  }
+
+  .planetsContainer, .missionsContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 40px;
+    text-shadow: -15px 3px 0 rgba(136, 22, 137, 0.789);
+  }
+
+  .title {
+    font-size: 20px;
+    padding: 30px;
+    margin: 20px;
+  }
+}
